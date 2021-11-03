@@ -1,17 +1,11 @@
-#include<stdio.h>
 #include <stdio.h>
-#include "..\include\myfile.h"
-
-int main(){
-
-    char name[] = "Abhinav";
-    sgs_clib_convert_to_upper(name);
-
-    printf("After convering to all Caps name is: %s",name);
-#include"../include/hello.h"
-int main(){
-    char a[]="VivekDawar";
-     sgs_clib_convert_to_lower(a);
-    printf("%s",a);
-
+#include"../include/hello.h" 
+int main()
+{
+  const char *str="my name is xyz"; 
+  int c='x';
+  char *ptr;
+  ptr = sgs_clib_strrchr(str,c);
+  printf( "The last occurrence of %c in '%s' is '%s'\n", c, str, ptr );
+  return 0;
 }

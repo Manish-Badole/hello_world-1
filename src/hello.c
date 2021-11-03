@@ -1,7 +1,12 @@
-void sgs_clib_convert_to_lower(char *message){
-    for(;*message!='\0';message++){
-        if(*message<=91&&*message>=65){
-            *message=*message+32;
-        }
+
+char *sgs_clib_strrchr(const char *str, int c)
+{
+    char *p ;
+
+    for(; *str ; ++str)
+    {
+        if(*str == c)
+            p = (char*) str;
     }
+    return p;
 }
