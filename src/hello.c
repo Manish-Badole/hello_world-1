@@ -1,12 +1,12 @@
 
-char *sgs_clib_strrchr(const char *str, int c)
-{
+ char * sgs_clib_strpbrk(const char *str1, const char *str2) 
+    {
     char *p ;
 
-    for(; *str ; ++str)
+    for(; *str2 ; ++str2)
     {
-        if(*str == c)
-            p = (char*) str;
+        if(*str2 == str1)
+            p = (char*) str2;
     }
     return p;
 }
