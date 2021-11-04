@@ -1,11 +1,21 @@
-#include <stdio.h>
-#include"../include/hello.h" 
-int main()
+#include<stdio.h>
+#include<string.h>
+#include "..\include\hello.h"
+
+int main () 
 {
-  const char *str="my name is xyz"; 
-  int c='x';
-  char *ptr;
-  ptr = sgs_clib_strrchr(str,c);
-  printf( "The last occurrence of %c in '%s' is '%s'\n", c, str, ptr );
-  return 0;
+   const char str1[] = "abcde2fghi3jk4l";
+   const char str2[] = "34";
+   char *ret;
+
+   ret = strpbrk(str1, str2);
+   if(ret)
+   {
+      printf("First matching character: %c\n", *ret);
+   } 
+  else
+  {
+      printf("Character not found");
+   } 
+  return(0);
 }
